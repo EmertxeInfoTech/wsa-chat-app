@@ -15,11 +15,14 @@ export const useChatStore = create((set, get) => ({
   getUsers: async (token) => {
     set({ isUsersLoading: true });
     try {
-      const res = await axios.get(`http://localhost:7000/api/users/getall`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const res = await axios.get(
+        `https://wsa-chat-app-sgb2.onrender.com/api/users/getall`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       set({ users: res.data });
     } catch (error) {
       console.error(error.response?.data?.message || "Failed to fetch users");
@@ -31,7 +34,7 @@ export const useChatStore = create((set, get) => ({
     set({ isMessageLoading: true });
     try {
       const res = await axios.get(
-        `http://localhost:7000/api/messages/${userId}`,
+        `https://wsa-chat-app-sgb2.onrender.com/api/messages/${userId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       console.log("res", res.data);
@@ -49,7 +52,7 @@ export const useChatStore = create((set, get) => ({
     const { selectedUser, messages } = get();
     try {
       const res = await axios.post(
-        `http://localhost:7000/api/messages/send/${selectedUser.clerkUserId}`,
+        `https://wsa-chat-app-sgb2.onrender.com/api/messages/send/${selectedUser.clerkUserId}`,
         messageData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -65,7 +68,7 @@ export const useChatStore = create((set, get) => ({
   //https://socket.io/docs/v4/client-api/
   initalizeSocket: (userId) => {
     if (get().socket) return get().socket;
-    const socket = io("http://localhost:7000", {
+    const socket = io("https://wsa-chat-app-sgb2.onrender.com", {
       query: { userId: userId },
     });
 

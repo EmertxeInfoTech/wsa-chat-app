@@ -43,7 +43,7 @@ const handleClerkWebhook = async (req, res) => {
           userName: attributes.username || "",
           firstName: attributes.first_name || "",
           lastName: attributes.last_name || "",
-          proileImage: attributes.profile_image_url || "",
+          proileImage: attributes.image_url || "",
         });
 
         //save the new user to mongodb
@@ -67,7 +67,7 @@ const handleClerkWebhook = async (req, res) => {
               firstName: attributes.first_name,
               lastName: attributes.last_name,
               userName: attributes.username,
-              proileImage: attributes.profile_image_url,
+              proileImage: attributes.image_url,
             },
           }
         );
