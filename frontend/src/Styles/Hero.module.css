@@ -1,0 +1,61 @@
+/* Hero.module.css */
+
+.pageWrapper {
+  @apply flex flex-col min-h-screen;
+}
+
+.heroSection {
+  @apply flex-grow bg-gradient-to-b from-base-200 to-base-300 py-16 flex items-center justify-center;
+}
+
+.heroContent {
+  @apply hero-content flex-col lg:flex-row-reverse max-w-6xl gap-8;
+}
+
+.illustrationWrapper {
+  @apply lg:w-1/2 relative;
+}
+
+.chatBox {
+  @apply bg-primary/10 rounded-lg p-6 shadow-xl;
+}
+
+.chatHeader {
+  @apply flex gap-3 items-center mb-4 border-b pb-2;
+}
+
+.avatar {
+  @apply w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white;
+}
+
+.chatName {
+  @apply font-semibold;
+}
+
+.chatStatus {
+  @apply text-xs opacity-70;
+}
+
+.messageIncoming {
+  @apply bg-base-100 p-3 rounded-lg rounded-tl-none max-w-xs;
+}
+
+.messageOutgoing {
+  @apply bg-primary text-primary-content p-3 rounded-lg rounded-tr-none max-w-xs ml-auto;
+}
+
+.notificationIcon {
+  @apply absolute -bottom-4 -right-4 w-20 h-20 bg-accent rounded-full flex items-center justify-center text-accent-content text-3xl shadow-lg z-10;
+}
+
+.textSection {
+  @apply lg:w-1/2;
+}
+
+.title {
+  @apply text-4xl font-bold;
+}
+
+.subtitle {
+  @apply py-6 text-lg;
+}

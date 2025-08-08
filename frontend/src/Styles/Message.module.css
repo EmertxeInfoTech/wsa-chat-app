@@ -1,0 +1,13 @@
+/* Messages.module.css */
+
+.container {
+  @apply flex h-full overflow-hidden border rounded-lg mx-6;
+}
+
+.sidebarWrapper {
+  @apply h-full border-r border-base-300;
+}
+
+.chatWrapper {
+  @apply flex-1 h-full flex;
+}

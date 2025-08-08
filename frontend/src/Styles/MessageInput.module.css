@@ -1,0 +1,33 @@
+/* MessageInput.module.css */
+
+.previewContainer {
+  @apply relative w-fit mb-2;
+}
+
+.previewImage {
+  @apply max-w-full sm:max-w-xs rounded-md;
+}
+
+.removeButton {
+  @apply absolute top-1 right-1 bg-error text-white rounded-full p-1 hover:bg-error/80 transition-colors;
+}
+
+.formContainer {
+  @apply w-full;
+}
+
+.actions {
+  @apply flex items-center gap-2;
+}
+
+.imageButton {
+  @apply btn btn-circle btn-sm bg-base-200 hover:bg-base-300;
+}
+
+.textInput {
+  @apply input input-bordered flex-1 h-10 text-base;
+}
+
+.sendButton {
+  @apply btn btn-circle btn-primary btn-sm;
+}

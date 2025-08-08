@@ -1,0 +1,53 @@
+/* Chat.module.css */
+
+.chatContainer {
+  @apply flex flex-col h-full w-full overflow-hidden;
+}
+
+.chatHeader {
+  @apply border-b border-base-300 p-3 md:p-5 flex-shrink-0;
+}
+
+.avatarContainer {
+  @apply w-12 h-12 rounded-full relative;
+}
+
+.onlineIndicator {
+  @apply absolute bottom-0 right-0 w-3 h-3 bg-success border-2 border-white rounded-full;
+}
+
+.messagesArea {
+  @apply flex-1 overflow-y-auto p-3 md:p-5 space-y-4 scrollbar-thin;
+}
+
+.chatImage {
+  @apply w-8 h-8 md:w-10 md:h-10 rounded-full border;
+}
+
+.chatHeaderText {
+  @apply mb-1;
+}
+
+.chatTimestamp {
+  @apply text-xs opacity-50 ml-1;
+}
+
+/* .chatBubble {
+  @apply chat-bubble chat-message;
+} */
+
+.emptyState {
+  @apply flex flex-col items-center justify-center h-full mt-10;
+}
+
+.emptyIcon {
+  @apply w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center animate-bounce;
+}
+
+.emptyTitle {
+  @apply text-xl md:text-2xl font-bold text-center;
+}
+
+.messageInputContainer {
+  @apply border-t border-base-300 p-3 md:p-5;
+}
